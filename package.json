@@ -1,8 +1,8 @@
 {
-  "name": "ng-universal-demo",
+  "name": "web-developer",
   "version": "0.0.0",
   "license": "MIT",
-  "repository": {
+  "original-repository": {
     "type": "git",
     "url": "https://github.com/angular/universal-starter.git"
   },
@@ -15,9 +15,11 @@
     "Jason Jean <jasonjean1993@gmail.com>",
     "Fabian Wiles <fabian.wiles@gmail.com>"
   ],
+  "main": "dist/server.js",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "postinstall": "npm run build:dynamic",
     "build": "ng build",
     "build:client-and-server-bundles": "ng build --prod && ng build --prod --app 1 --output-hashing=false",
     "build:static": "npm run build:client-and-server-bundles && npm run webpack:server && npm run generate:static",

@@ -20,6 +20,8 @@
     "ng": "ng",
     "start": "ng serve",
     "postinstall": "npm run build:dynamic",
+    "heroku-prebuild": "export NPM_CONFIG_PRODUCTION=false; export NODE_ENV=; NPM_CONFIG_PRODUCTION=false NODE_ENV=development npm install --only=dev --dev",
+    "heroku-postbuild": "export NPM_CONFIG_PRODUCTION=true; export NODE_ENV=production;",
     "build": "ng build",
     "build:client-and-server-bundles": "ng build --prod && ng build --prod --app 1 --output-hashing=false",
     "build:static": "npm run build:client-and-server-bundles && npm run webpack:server && npm run generate:static",

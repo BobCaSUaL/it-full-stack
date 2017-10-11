@@ -63,16 +63,17 @@ import { Observable } from 'rxjs/Observable';
     #home-carousel {
       height: 70vh;
     }
-    .carousel-image-container {
+    .carousel-inner, .carousel-item {
       width: 100%;
       height: 70vh;
     }
-    .carousel-image-container > * {
+    .carousel-item > img {
       min-width: 100%; min-height: 100%;
       width: auto; height: auto;
       position: absolute;
       top: 50%; left: 50%; margin-right: -50%;
-      transform: translate(-50%, -50%)
+      transform: translate(-50%, -50%);
+      object-fit: cover
     }
     .carousel-caption {
       background-image: radial-gradient(

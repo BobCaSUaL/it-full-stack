@@ -15,11 +15,11 @@
     "Jason Jean <jasonjean1993@gmail.com>",
     "Fabian Wiles <fabian.wiles@gmail.com>"
   ],
-  "main": "dist/server.js",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
+    "start": "npm run serve:dynamic",
     "postinstall": "npm run build:dynamic",
+    "ng": "ng",
+    "develop": "ng serve",
     "build": "ng build",
     "build:client-and-server-bundles": "ng build --prod && ng build --prod --app 1 --output-hashing=false",
     "build:static": "npm run build:client-and-server-bundles && npm run webpack:server && npm run generate:static",

@@ -1,6 +1,5 @@
 import {NgModule} from '@angular/core'
 import { CommonModule } from '@angular/common';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {RouterModule} from '@angular/router'
 import {GalleryComponent} from './gallery.component'
 
@@ -10,8 +9,7 @@ import {GalleryComponent} from './gallery.component'
     CommonModule,
     RouterModule.forChild([
       { path: '', component: GalleryComponent, pathMatch: 'full'}
-    ]),
-    NgbModule
+    ])
   ]
 })
 export class GalleryModule {

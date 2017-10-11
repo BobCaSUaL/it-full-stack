@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 import { Observable } from 'rxjs/Observable';
 
 @Component({
@@ -94,7 +93,7 @@ import { Observable } from 'rxjs/Observable';
       max-width: 200px
     }
   `],
-  providers: [NgbCarouselConfig]
+  providers: []
 })
 export class HomeComponent implements OnInit {
   slides;
@@ -139,13 +138,6 @@ export class HomeComponent implements OnInit {
         `
     }
   ]
-
-  constructor(config: NgbCarouselConfig) {
-    // customize default values of carousels used by this component tree
-    config.interval = 10000;
-    config.wrap = false;
-    config.keyboard = false;
-  }
 
   ngOnInit() {
     this.slides = [{

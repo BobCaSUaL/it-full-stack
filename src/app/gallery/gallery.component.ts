@@ -7,7 +7,7 @@ import {Component} from '@angular/core'
       <h1>Gallery</h1>
       <div class="thumbnails container">
         <div class="col-md-4" *ngFor="let picture of pictures">
-          <ngb-rating max="5"></ngb-rating>
+          <!--ngb-rating max="5"></ngb-rating-->
           <img src="{{picture.url}}">
           <h3>{{picture.title}}</h3>
           <p> {{picture.summary}}</p>
